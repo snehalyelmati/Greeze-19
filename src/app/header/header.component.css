@@ -1,0 +1,9 @@
+a {
+  font-size: medium;
+  cursor: pointer;
+}
+
+a.navbar-brand {
+  font-size: x-large;
+  font-weight: bold;
+}

@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand navbar-light mb-3 py-2 px-0">
+  <a class="navbar-brand ml-3 text-uppercase" routerLink="/">Greeze</a>
+
+  <ul class="navbar-nav w-100">
+    <li *ngIf="isAuthenticated" class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/recipes">Hospitals</a>
+    </li>
+    <li *ngIf="isAuthenticated" class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/shopping-list">My Profile</a>
+    </li>
+
+    <li *ngIf="!isAuthenticated" class="nav-item ml-auto" routerLinkActive="active">
+      <a class="nav-link" routerLink="/auth">LOGIN</a>
+    </li>
+    <li *ngIf="isAuthenticated" class="nav-item ml-auto" routerLinkActive="active">
+      <a (click)="onLogout()" class="nav-link">LOGOUT</a>
+    </li>
+  </ul>
+</nav>
