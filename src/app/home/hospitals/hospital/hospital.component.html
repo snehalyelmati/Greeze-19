@@ -1,0 +1,12 @@
+<div class="flex-row p-1">
+  <a [routerLink]="[index]" class="clearfix rounded list-group-item" routerLinkActive="active">
+    <div class="float-left col-8">
+      <h5 class="card-title">{{ hospital.name }}</h5>
+      <p class="card-text">{{ hospital.address }}</p>
+    </div>
+
+    <div class="float-right col-4">
+      <img alt="Hospital Image" class="embed-responsive rounded border" src="{{ hospital.geohash }}">
+    </div>
+  </a>
+</div>

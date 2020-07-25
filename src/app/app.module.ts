@@ -12,6 +12,9 @@ import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
+import { HospitalsComponent } from './home/hospitals/hospitals.component';
+import { CovidMapComponent } from './home/covid-map/covid-map.component';
+import { HospitalComponent } from './home/hospitals/hospital/hospital.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinne
     UserComponent,
     AuthComponent,
     HeaderComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    HospitalsComponent,
+    CovidMapComponent,
+    HospitalComponent
   ],
   imports: [
     BrowserModule,

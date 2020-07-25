@@ -3,10 +3,10 @@
 
   <ul class="navbar-nav w-100">
     <li *ngIf="isAuthenticated" class="nav-item" routerLinkActive="active">
-      <a class="nav-link" routerLink="/recipes">Hospitals</a>
+      <a class="nav-link" routerLink="home">Hospitals</a>
     </li>
     <li *ngIf="isAuthenticated" class="nav-item" routerLinkActive="active">
-      <a class="nav-link" routerLink="/shopping-list">My Profile</a>
+      <a class="nav-link" routerLink="user">My Profile</a>
     </li>
 
     <li *ngIf="!isAuthenticated" class="nav-item ml-auto" routerLinkActive="active">
