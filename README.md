@@ -8,6 +8,11 @@ A portal for live updates on COVID-19, which facilitates the user to enquire or 
 * Has Session Manager with local storage capability
 * Has built in caching
 
+## Screenshots
+![](screenshots/Home.png)
+
+![](screenshots/RestAPI.png)
+
 ## GCP REST API for managing data
 This is the GitHub repository link for the API: https://github.com/rohanbojja/greeze/tree/master/greeze
 
