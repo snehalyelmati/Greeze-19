@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Hospital} from '../hospital.model';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-hospital',
@@ -8,10 +9,14 @@ import {Hospital} from '../hospital.model';
 })
 export class HospitalComponent implements OnInit {
   @Input() hospital: Hospital;
+  @Input() index: number;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
 
+  onBook() {
+  //  http request
+  }
 }

@@ -12,6 +12,9 @@
     <li *ngIf="!isAuthenticated" class="nav-item ml-auto" routerLinkActive="active">
       <a class="nav-link" routerLink="/auth">LOGIN</a>
     </li>
+    <li *ngIf="isAuthenticated" class="nav-item" routerLinkActive="active">
+      <a (click)="onManage()" class="nav-link">Manage Hospitals</a>
+    </li>
     <li *ngIf="isAuthenticated" class="nav-item ml-auto" routerLinkActive="active">
       <a (click)="onLogout()" class="nav-link">LOGOUT</a>
     </li>

@@ -15,6 +15,9 @@ import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinne
 import { HospitalsComponent } from './home/hospitals/hospitals.component';
 import { CovidMapComponent } from './home/covid-map/covid-map.component';
 import { HospitalComponent } from './home/hospitals/hospital/hospital.component';
+import { HospitalDetailComponent } from './home/hospital-detail/hospital-detail.component';
+import {HttpClientModule} from '@angular/common/http';
+import { ManageHospitalsComponent } from './manage-hospitals/manage-hospitals.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +29,15 @@ import { HospitalComponent } from './home/hospitals/hospital/hospital.component'
     LoadingSpinnerComponent,
     HospitalsComponent,
     CovidMapComponent,
-    HospitalComponent
+    HospitalComponent,
+    HospitalDetailComponent,
+    ManageHospitalsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule
   ],

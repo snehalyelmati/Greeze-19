@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../auth/auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import {AuthService} from '../auth/auth.service';
 export class HeaderComponent implements OnInit {
   isAuthenticated = false;
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -20,5 +21,12 @@ export class HeaderComponent implements OnInit {
 
   onLogout() {
     this.authService.logout();
+  }
+
+  onManage() {
+    // if the user is a manager
+    // show the list
+    // else return to home
+    this.router.navigate(['manage-hospitals']);
   }
 }

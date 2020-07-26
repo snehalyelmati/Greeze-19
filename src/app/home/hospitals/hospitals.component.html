@@ -1,9 +1,12 @@
 <div class="d-flex flex-wrap">
   <div class="flex-row clearfix col-12 my-3 pb-2 px-0">
-    <h3 class="float-left text-uppercase">Hospitals Nearby: </h3>
+    <h4 class="float-left text-uppercase">Hospitals Nearby:</h4>
+    <button class="btn btn-primary float-right" (click)="onRefresh()">
+      Reload
+    </button>
   </div>
 
   <div class="flex-row card-deck">
-    <app-hospital *ngFor="let hospital of hospitals; let i = index" [hospital]="hospital"></app-hospital>
+    <app-hospital *ngFor="let hospital of hospitals; let i = index" [index]="i" [hospital]="hospital"></app-hospital>
   </div>
 </div>
