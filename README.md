@@ -1,8 +1,18 @@
-# Greeze
+# Greeze - COVID 19 Tracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
+## Features:
+* Uses custom built REST API on Google Cloud Platform to manage data.
+* Built with Angular and Bootstrap
+* Has Session Manager with local storage capability
+* Has built in caching
+
+## GCP REST API for managing data
+This is the GitHub repository link for the API: https://github.com/rohanbojja/greeze/tree/master/greeze
+Visit this site for API documentation: [https://greeze-de2bd.el.r.appspot.com/swagger-ui.html](https://greeze-de2bd.el.r.appspot.com/swagger-ui.html)
+
 
 ## Development server
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
