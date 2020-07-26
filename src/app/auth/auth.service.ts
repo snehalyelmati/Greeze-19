@@ -99,7 +99,7 @@ export class AuthService {
           photoURL: result.user.photoURL
         });
         auth().currentUser.getIdToken(true).then(res => {
-          console.log('ID token: ' + res);
+          console.log('ID token:' + res);
           this.idToken.next(res);
           localStorage.setItem('idToken', res);
         });
@@ -111,6 +111,7 @@ export class AuthService {
   logout() {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
+      localStorage.removeItem('idToken');
       this.router.navigate(['auth']);
       this.user.next(null);
     });
