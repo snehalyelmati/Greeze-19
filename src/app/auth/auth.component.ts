@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {AuthService} from './auth.service';
 import {NgForm} from '@angular/forms';
-import {async} from '@angular/core/testing';
 
 @Component({
   selector: 'app-auth',
@@ -20,13 +19,14 @@ export class AuthComponent implements OnInit {
   ngOnInit(): void {
     this.authService.user.subscribe(user => {
       this.isAuthenticated = !!user;
+      // console.log(this.authService.user + ' ' + !!user);
       // console.log(localStorage.getItem('user'));
-      console.log(this.authService.user + ' ' + !!user);
+      if (this.isAuthenticated) {
+        // console.log('From onInit');
+        this.router.navigate(['home']);
+      }
     });
 
-    // if (this.isAuthenticated) {
-    //   this.router.navigate(['home']);
-    // }
   }
 
   switchMode() {
@@ -34,14 +34,14 @@ export class AuthComponent implements OnInit {
   }
 
   signInWithGoogle() {
-    console.log('Logged in with google...');
     this.authService.GoogleAuth();
+    console.log('Logged in with google...');
   }
 
   signInWithFacebook() {
     // firebase code to signin with google
-    console.log('Logged in with facebook...');
     this.authService.FacebookAuth();
+    console.log('Logged in with facebook...');
   }
 
   onSubmit(f: NgForm) {
