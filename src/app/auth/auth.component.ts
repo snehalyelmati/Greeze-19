@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {AuthService} from './auth.service';
 import {NgForm} from '@angular/forms';
+import {async} from '@angular/core/testing';
 
 @Component({
   selector: 'app-auth',
@@ -11,11 +12,21 @@ import {NgForm} from '@angular/forms';
 export class AuthComponent implements OnInit {
   isLoginMode = true;
   isLoading = false;
+  isAuthenticated = false;
 
   constructor(private router: Router, private authService: AuthService) {
   }
 
   ngOnInit(): void {
+    this.authService.user.subscribe(user => {
+      this.isAuthenticated = !!user;
+      // console.log(localStorage.getItem('user'));
+      console.log(this.authService.user + ' ' + !!user);
+    });
+
+    // if (this.isAuthenticated) {
+    //   this.router.navigate(['home']);
+    // }
   }
 
   switchMode() {
@@ -30,7 +41,7 @@ export class AuthComponent implements OnInit {
   signInWithFacebook() {
     // firebase code to signin with google
     console.log('Logged in with facebook...');
-    this.router.navigate(['/']);
+    this.authService.FacebookAuth();
   }
 
   onSubmit(f: NgForm) {
@@ -47,6 +58,6 @@ export class AuthComponent implements OnInit {
     }
     f.reset();
 
-    this.router.navigate(['/']);
+    this.router.navigate(['home']);
   }
 }

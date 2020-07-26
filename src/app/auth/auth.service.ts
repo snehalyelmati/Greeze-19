@@ -53,10 +53,13 @@ export class AuthService {
       });
       // send data to greeze api
       auth().currentUser.getIdToken(true).then(res => {
-        console.log('ID token: ' + res);
+        // console.log('ID token: ' + res);
         this.idToken.next(res);
         localStorage.setItem('idToken', res);
       });
+    }).catch((error) => {
+      window.alert(error);
+      this.router.navigate(['auth']);
     });
   }
 
@@ -74,15 +77,21 @@ export class AuthService {
       });
       // send data to greeze api
       auth().currentUser.getIdToken(true).then(res => {
-        console.log('ID token: ' + res);
+        // console.log('ID token: ' + res);
         this.idToken.next(res);
         localStorage.setItem('idToken', res);
       });
+    }).catch((error) => {
+      window.alert(error);
     });
   }
 
   GoogleAuth() {
     return this.AuthLogin(new auth.GoogleAuthProvider());
+  }
+
+  FacebookAuth() {
+    return this.AuthLogin(new auth.FacebookAuthProvider());
   }
 
   // Auth logic to run auth providers
@@ -99,7 +108,7 @@ export class AuthService {
           photoURL: result.user.photoURL
         });
         auth().currentUser.getIdToken(true).then(res => {
-          console.log('ID token:' + res);
+          // console.log('ID token:' + res);
           this.idToken.next(res);
           localStorage.setItem('idToken', res);
         });
