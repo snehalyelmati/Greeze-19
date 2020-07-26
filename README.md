@@ -1,26 +1,29 @@
 
+
+
 # Greeze - COVID 19 Tracker
 A portal for live updates on COVID-19, which facilitates the user to enquire or book a bed if required in the nearest hospitals based on the live data directly from the respective hospitals like number of beds available, capacity, etc. Hospital managers/administrators can view and accept or reject requests from users within the portal.
 
 ## Features:
-* Uses custom built REST API on Google Cloud Platform to manage data.
-* Displays live stats for COVID-19 from Microsoft Bing.
-* Built with Angular and Bootstrap
-* Complete Firebase authentication using Auth Tokens
-* All important routes are protected from un-authenticated users.
-* Hosted on Firebase Hosting
-* Has Session Manager with local storage capability
-* Has built in caching
+* Displays **live stats for COVID-19** from Microsoft Bing.
+* Built with **Angular** and **Bootstrap**
+* Uses custom built **REST API** for accessing data from **Datastore** (Google Cloud Platform) to manage data.
+* Complete **Firebase authentication** using **Auth Tokens**
+  * All important **routes are protected** from un-authenticated users.
+  * Available authentication methods: **Google OAuth, Email and Password**.
+* Hosted on **Firebase Hosting**
+* Has **Session Manager** with local storage capability
+* Has built in **caching**
 
 ## Screenshots
 
-![](screenshots/LoginPage.png) Fig 1. Login Page
+![](screenshots/LoginPage.png) _Fig 1. Login Page_
 
-![](screenshots/Home.png) Fig 2. Home Page
+![](screenshots/Home.png) _Fig 2. Home Page_
 
-![](screenshots/ManageHospitals.png) Fig 3. Manage Hospitals Page
+![](screenshots/ManageHospitals.png) _Fig 3. Manage Hospitals Page_
 
-![](screenshots/RestAPI.png) Fig 4. RestAPI Structure
+![](screenshots/RestAPI.png) _Fig 4. RestAPI Structure_
 
 ## GCP REST API for managing data
 This is the GitHub repository link for the API: https://github.com/rohanbojja/greeze/tree/master/greeze
@@ -56,3 +59,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Future Scope
 * Add location based hospital retrieval functionality.
 * Sorting the hospitals based on user specified criteria like no. of beds or the distance to the hospital, etc.
+* Add additional authentication methods like Facebook or twitter.
