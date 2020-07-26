@@ -1,7 +1,9 @@
 # Greeze - COVID 19 Tracker
+A portal for live updates on COVID-19, which facilitates the user to enquire or book a bed if required in the nearest hospitals based on the live data directly from the respective hospitals like number of beds available, capacity, etc.
 
 ## Features:
 * Uses custom built REST API on Google Cloud Platform to manage data.
+* Displays live stats for COVID-19 from Microsoft Bing.
 * Built with Angular and Bootstrap
 * Has Session Manager with local storage capability
 * Has built in caching
