@@ -10,6 +10,7 @@ export class Hospital {
     public hospitalType: number,
     public lastModifiedMSE: number,
     public modId: string,
-    public phoneNo: number) {
+    public phoneNo: number,
+  ) {
   }
 }

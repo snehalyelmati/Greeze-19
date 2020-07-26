@@ -1,13 +1,14 @@
 <div class="flex-row p-1">
-  <a (click)="onBook()" class="clearfix rounded list-group-item" routerLinkActive="active">
+  <a class="clearfix rounded list-group-item" routerLinkActive="active">
     <div class="float-left col-8">
       <h5 class="card-title">{{ hospital.name }}</h5>
       <p class="card-text">{{ hospital.address }}</p>
-      <button class="btn btn-success py-0">Book</button>
+      <button class="btn btn-success py-0" (click)="onBook()">Book</button>
     </div>
 
     <div class="float-right col-4">
-      <img alt="Hospital Image" class="embed-responsive rounded border" src="{{ hospital.geohash }}">
+      <img alt="Hospital Image" class="embed-responsive rounded border" style="width: 100px; height: 100px"
+           src="https://cdn0.iconfinder.com/data/icons/medical-and-clinical-healthcare/78/35-512.png">
     </div>
   </a>
 </div>

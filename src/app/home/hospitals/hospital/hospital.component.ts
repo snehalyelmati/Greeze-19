@@ -11,12 +11,13 @@ export class HospitalComponent implements OnInit {
   @Input() hospital: Hospital;
   @Input() index: number;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   ngOnInit(): void {
   }
 
   onBook() {
-  //  http request
+    alert('Your request has been sent, please wait for the hospital moderator to contact you.');
   }
 }
