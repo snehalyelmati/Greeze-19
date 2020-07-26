@@ -13,13 +13,13 @@ A portal for live updates on COVID-19, which facilitates the user to enquire or 
 
 ## Screenshots
 
-![](screenshots/LoginPage.png) Login Page
+![](screenshots/LoginPage.png) Fig 1. Login Page
 
-![](screenshots/Home.png) Home Page
+![](screenshots/Home.png) Fig 2. Home Page
 
-![](screenshots/ManageHospitals.png) Manage Hospitals Page
+![](screenshots/ManageHospitals.png) Fig 3. Manage Hospitals Page
 
-![](screenshots/RestAPI.png) RestAPI Structure
+![](screenshots/RestAPI.png) Fig 4. RestAPI Structure
 
 ## GCP REST API for managing data
 This is the GitHub repository link for the API: https://github.com/rohanbojja/greeze/tree/master/greeze
