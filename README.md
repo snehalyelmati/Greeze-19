@@ -1,12 +1,13 @@
 
 # Greeze - COVID 19 Tracker
-A portal for live updates on COVID-19, which facilitates the user to enquire or book a bed if required in the nearest hospitals based on the live data directly from the respective hospitals like number of beds available, capacity, etc.
+A portal for live updates on COVID-19, which facilitates the user to enquire or book a bed if required in the nearest hospitals based on the live data directly from the respective hospitals like number of beds available, capacity, etc. Hospital managers/administrators can view and accept or reject requests from users within the portal.
 
 ## Features:
 * Uses custom built REST API on Google Cloud Platform to manage data.
 * Displays live stats for COVID-19 from Microsoft Bing.
 * Built with Angular and Bootstrap
-* Complete Firebase authentication with Guards
+* Complete Firebase authentication using Auth Tokens
+* All important routes are protected from un-authenticated users.
 * Hosted on Firebase Hosting
 * Has Session Manager with local storage capability
 * Has built in caching
@@ -51,3 +52,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Future Scope
+* Add location based hospital retrieval functionality.
+* Sorting the hospitals based on user specified criteria like no. of beds or the distance to the hospital, etc.
