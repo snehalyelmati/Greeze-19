@@ -11,7 +11,7 @@
 * Uses custom built **REST API** for accessing data from **Datastore** (Google Cloud Platform) to manage data.
 * Complete **Firebase authentication** using **Auth Tokens**
   * All important **routes are protected** from un-authenticated users.
-  * Available authentication methods: **Google OAuth, Email and Password**.
+  * Available authentication methods: **Google OAuth, Facebook OAuth, Email and Password**.
 * Hosted on **Firebase Hosting**
 * Has **Session Manager** with local storage capability
 * Has built in **caching**
